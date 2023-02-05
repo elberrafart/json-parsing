@@ -1,7 +1,10 @@
-print("Hello Git")
+import json
 
-num = 5
+courses = '{"name": "RazRafart","languages": ["Java", "Python"]}'
 
-while num > 2:
-    num = num - 1
-    print(num)
+#loads method parse json string and returns dict
+
+dict_courses = json.loads(courses)
+
+print(type(dict_courses))
+print(dict_courses["languages"][0])
