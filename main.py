@@ -26,5 +26,11 @@ with open("example.json") as file:
     #Iterating through teams
     for team in teams:
         print(team)
+        if team == "Los Angeles Kings":
+            print("Go Team!")
 
-    print(data["quiz"]["maths"]["q1"]["question"])
+#Prints Questions
+print(data["quiz"]["maths"]["q1"]["question"])
+
+#Prints 4
+print(data["quiz"]["maths"]["q2"]["options"][3])
