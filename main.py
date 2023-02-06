@@ -2,9 +2,22 @@ import json
 
 courses = '{"name": "RazRafart","languages": ["Java", "Python"]}'
 
-#loads method parse json string and returns dict
+# loads method parse json string and returns dict
 
 dict_courses = json.loads(courses)
 
-print(type(dict_courses))
-print(dict_courses["languages"][0])
+# print(type(dict_courses))
+# print(dict_courses["languages"][1])
+
+
+# -----------Parse content present in Json file--------------
+def print_json_file(json_file, desired_output):
+    with open(json_file) as file:
+        data = json.load(file)
+        print(data)
+        print(type(data[desired_output]))
+
+#Prints Los Angeles Kings
+with open("example.json") as file:
+    data = json.load(file)
+    print(data["quiz"]["sport"]["q1"]["options"][1])
