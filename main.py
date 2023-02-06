@@ -18,6 +18,13 @@ def print_json_file(json_file, desired_output):
         print(type(data[desired_output]))
 
 #Prints Los Angeles Kings
+#If value is a string then use string
+#If option is within list use index
 with open("example.json") as file:
     data = json.load(file)
-    print(data["quiz"]["sport"]["q1"]["options"][1])
+    teams = data["quiz"]["sport"]["q1"]["options"]
+    #Iterating through teams
+    for team in teams:
+        print(team)
+
+    print(data["quiz"]["maths"]["q1"]["question"])
