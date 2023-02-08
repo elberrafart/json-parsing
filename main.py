@@ -34,3 +34,5 @@ print(data["quiz"]["maths"]["q1"]["question"])
 
 #Prints 4
 print(data["quiz"]["maths"]["q2"]["options"][3])
+
+print(data["quiz"])
